@@ -164,7 +164,7 @@ function QuestCard({ quest }: { quest: typeof quests[0] }) {
         
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1.5">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-accent to-yellow-500 shadow-sm group-hover:glow-gold transition-all">
+            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent shadow-sm group-hover:glow-gold transition-all">
               <Coins className="h-3 w-3 text-accent-foreground" />
             </div>
             <span className="font-bold text-accent">${quest.reward}</span>
@@ -174,7 +174,7 @@ function QuestCard({ quest }: { quest: typeof quests[0] }) {
 
       {/* Accept Button */}
       <Button 
-        className="w-full mt-4 bg-gradient-to-r from-primary/80 to-secondary/80 text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 hover:from-primary hover:to-secondary"
+        className="w-full mt-4 bg-primary/80 text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary"
       >
         Accept Quest
       </Button>

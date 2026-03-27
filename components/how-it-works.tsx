@@ -23,7 +23,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 sm:py-24 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+    <section className="py-20 sm:py-24 bg-primary/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -44,7 +44,7 @@ export function HowItWorks() {
             >
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-1/2 w-full h-px bg-gradient-to-r from-border via-primary/30 to-border" />
+                <div className="hidden md:block absolute top-12 left-1/2 w-full h-px bg-border" />
               )}
 
               {/* Icon Container */}
@@ -53,7 +53,7 @@ export function HowItWorks() {
                   <step.icon className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
                 </div>
                 {/* Step Number */}
-                <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-xs font-bold text-primary-foreground">
+                <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
                   {step.step}
                 </div>
               </div>

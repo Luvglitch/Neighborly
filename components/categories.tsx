@@ -8,7 +8,7 @@ const categories = [
     name: "Delivery",
     description: "Package pickups & drop-offs",
     questCount: 234,
-    gradient: "from-blue-500/20 to-cyan-500/20",
+    bgHover: "hover:bg-blue-500/10",
     borderHover: "hover:border-blue-500/50",
     iconColor: "text-blue-400",
   },
@@ -17,7 +17,7 @@ const categories = [
     name: "Tech Help",
     description: "Setup, repairs & troubleshooting",
     questCount: 156,
-    gradient: "from-primary/20 to-secondary/20",
+    bgHover: "hover:bg-primary/10",
     borderHover: "hover:border-primary/50",
     iconColor: "text-primary",
   },
@@ -26,7 +26,7 @@ const categories = [
     name: "Errands",
     description: "Shopping, tasks & odd jobs",
     questCount: 312,
-    gradient: "from-accent/20 to-yellow-500/20",
+    bgHover: "hover:bg-accent/10",
     borderHover: "hover:border-accent/50",
     iconColor: "text-accent",
   },
@@ -35,7 +35,7 @@ const categories = [
     name: "Tutoring",
     description: "Academic help & skill sharing",
     questCount: 98,
-    gradient: "from-emerald-500/20 to-teal-500/20",
+    bgHover: "hover:bg-emerald-500/10",
     borderHover: "hover:border-emerald-500/50",
     iconColor: "text-emerald-400",
   },
@@ -60,10 +60,8 @@ export function Categories() {
           {categories.map((category) => (
             <button
               key={category.name}
-              className={`group relative overflow-hidden rounded border border-border/50 bg-card/60 backdrop-blur-sm p-6 text-left transition-all duration-300 ${category.borderHover} hover:bg-card/80 hover:-translate-y-1 hover:shadow-lg`}
+              className={`group relative overflow-hidden rounded border border-border/50 bg-card/60 backdrop-blur-sm p-6 text-left transition-all duration-300 ${category.borderHover} ${category.bgHover} hover:-translate-y-1 hover:shadow-lg`}
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               
               {/* Content */}
               <div className="relative z-10">

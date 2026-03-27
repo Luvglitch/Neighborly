@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-gradient-to-br from-primary to-secondary glow-purple">
+          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary glow-purple">
             <Swords className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold tracking-tight text-glow">Neighborly</span>
@@ -42,7 +42,7 @@ export function Navbar() {
         {/* CTA Button */}
         <div className="hidden md:block">
           <Button 
-            className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold animate-pulse-glow hover:scale-105 transition-transform"
+            className="bg-primary text-primary-foreground font-semibold animate-pulse-glow hover:scale-105 transition-transform"
           >
             Start Questing
           </Button>
@@ -73,7 +73,7 @@ export function Navbar() {
               </Link>
             ))}
             <Button 
-              className="mt-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold"
+              className="mt-2 bg-primary text-primary-foreground font-semibold"
             >
               Start Questing
             </Button>

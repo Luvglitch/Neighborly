@@ -4,8 +4,8 @@ import { Sparkles, ArrowRight, Coins, MapPin, Clock } from "lucide-react"
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 sm:py-32">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-primary/5" />
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -18,7 +18,7 @@ export function HeroSection() {
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-balance">
               Turn Everyday Tasks Into{" "}
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              <span className="text-primary text-glow">
                 Quests
               </span>
             </h1>
@@ -31,7 +31,7 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold glow-purple hover:scale-105 transition-transform"
+                className="bg-primary text-primary-foreground font-semibold glow-purple hover:scale-105 transition-transform"
               >
                 Explore Quests
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -145,12 +145,12 @@ function QuestCardPreview({
       </div>
       
       <div className="mt-4 flex items-center justify-between">
-        <div className="flex items-center gap-1.5">
-          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-accent to-yellow-500 glow-gold">
-            <Coins className="h-3 w-3 text-accent-foreground" />
+          <div className="flex items-center gap-1.5">
+            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent glow-gold">
+              <Coins className="h-3 w-3 text-accent-foreground" />
+            </div>
+            <span className="font-bold text-accent">${reward}</span>
           </div>
-          <span className="font-bold text-accent">${reward}</span>
-        </div>
         <Button size="sm" variant="ghost" className="text-xs hover:text-primary">
           View Quest
         </Button>
