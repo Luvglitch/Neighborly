@@ -49,7 +49,7 @@ export function HowItWorks() {
 
               {/* Icon Container */}
               <div className="relative inline-flex mb-6">
-                <div className="flex h-24 w-24 items-center justify-center rounded border border-border/50 bg-card/60 backdrop-blur-sm transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/80 group-hover:glow-purple group-hover:scale-105">
+                <div className="flex h-24 w-24 items-center justify-center rounded border border-border/50 bg-card/60 backdrop-blur-sm transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/80 group-hover:glow-green group-hover:scale-105">
                   <step.icon className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
                 </div>
                 {/* Step Number */}

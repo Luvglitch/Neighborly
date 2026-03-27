@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#quests", label: "Browse Quests" },
+  { href: "/quests", label: "Browse Quests" },
   { href: "#post", label: "Post Quest" },
   { href: "#my-quests", label: "My Quests" },
 ]
@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary glow-purple">
+          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary glow-green">
             <Swords className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold tracking-tight text-glow">Neighborly</span>
@@ -41,11 +41,13 @@ export function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button 
-            className="bg-primary text-primary-foreground font-semibold animate-pulse-glow hover:scale-105 transition-transform"
-          >
-            Start Questing
-          </Button>
+          <Link href="/quests">
+            <Button 
+              className="bg-primary text-primary-foreground font-semibold animate-pulse-glow hover:scale-105 transition-transform"
+            >
+              Start Questing
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,11 +74,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button 
-              className="mt-2 bg-primary text-primary-foreground font-semibold"
-            >
-              Start Questing
-            </Button>
+            <Link href="/quests" onClick={() => setMobileMenuOpen(false)}>
+              <Button 
+                className="mt-2 w-full bg-primary text-primary-foreground font-semibold"
+              >
+                Start Questing
+              </Button>
+            </Link>
           </nav>
         </div>
       )}

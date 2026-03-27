@@ -1,7 +1,17 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Sparkles, ArrowRight, Coins, MapPin, Clock } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
+  const scrollToQuests = () => {
+    const element = document.getElementById("featured-quests")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="relative overflow-hidden py-20 sm:py-32">
       {/* Background */}
@@ -31,18 +41,21 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-primary text-primary-foreground font-semibold glow-purple hover:scale-105 transition-transform"
+                onClick={scrollToQuests}
+                className="bg-primary text-primary-foreground font-semibold glow-green hover:scale-105 transition-transform"
               >
                 Explore Quests
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-muted hover:border-primary/50 transition-colors"
-              >
-                Post a Quest
-              </Button>
+              <Link href="/quests">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-border hover:bg-muted hover:border-primary/50 transition-colors"
+                >
+                  Browse All Quests
+                </Button>
+              </Link>
             </div>
             
             {/* Stats */}
@@ -125,7 +138,7 @@ function QuestCardPreview({
   }
 
   return (
-    <div className="rounded border border-border/50 bg-card/80 backdrop-blur-sm p-4 shadow-lg hover:border-primary/50 transition-all hover:glow-purple">
+    <div className="rounded border border-border/50 bg-card/80 backdrop-blur-sm p-4 shadow-lg hover:border-primary/50 transition-all hover:glow-green">
       <div className="flex items-start justify-between">
         <h3 className="font-semibold text-card-foreground">{title}</h3>
         <span className={`text-xs px-2 py-0.5 rounded border capitalize ${difficultyColors[difficulty]}`}>

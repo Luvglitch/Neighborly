@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Coins, MapPin, Clock, Zap } from "lucide-react"
+import Link from "next/link"
 
 const quests = [
   {
@@ -81,7 +82,7 @@ const difficultyConfig = {
 
 export function FeaturedQuests() {
   return (
-    <section id="quests" className="py-20 sm:py-24">
+    <section id="featured-quests" className="py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -106,13 +107,15 @@ export function FeaturedQuests() {
 
         {/* View All Button */}
         <div className="mt-12 text-center">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
-          >
-            View All Quests
-          </Button>
+          <Link href="/quests">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-border hover:border-primary/50 hover:bg-primary/5 transition-all"
+            >
+              View All Quests
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -123,7 +126,7 @@ function QuestCard({ quest }: { quest: typeof quests[0] }) {
   const difficulty = difficultyConfig[quest.difficulty]
 
   return (
-    <div className="group relative rounded border border-border/50 bg-card/60 backdrop-blur-sm p-5 transition-all duration-300 hover:border-primary/50 hover:bg-card/80 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+    <div className="group relative rounded border border-border/50 bg-card/60 backdrop-blur-sm p-5 transition-all duration-300 hover:border-primary/50 hover:bg-card/80 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20">
       {/* Status Badge */}
       <div className="absolute -top-2 -right-2">
         <Badge className="bg-easy/20 text-easy border border-easy/30 text-xs font-medium">
